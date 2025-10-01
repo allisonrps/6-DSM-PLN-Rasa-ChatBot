@@ -1,0 +1,40 @@
+version: "3.1"
+
+rules:
+
+- rule: Sempre responder a saudação
+  steps:
+    - intent: saudacao
+    - action: utter_saudacao
+
+- rule: Sempre responder despedida
+  steps:
+    - intent: despedida
+    - action: utter_despedida
+
+- rule: Validar sabor
+  steps:
+    - intent: informar_sabor_pizza
+    - action: action_validar_sabor
+    - action: utter_pedir_tamanho
+
+- rule: Validar tamanho (e pedir borda)
+  steps:
+    - intent: informar_tamanho_pizza
+    - action: action_validar_tamanho
+    - action: utter_pedir_borda
+
+- rule: Usuário pergunta sobre entrega
+  steps:
+    - intent: perguntar_entrega
+    - action: action_informar_entrega
+
+- rule: Usuário pede o cardápio
+  steps:
+    - intent: pedir_cardapio
+    - action: action_mostrar_cardapio_preco
+
+- rule: Confirmar pedido
+  steps:
+    - intent: confirmar_pedido
+    - action: utter_agradecer

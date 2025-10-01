@@ -1,0 +1,97 @@
+version: "3.1"
+
+nlu:
+
+- intent: saudacao
+  examples: |
+    - oi
+    - olá
+    - bom dia
+    - boa tarde
+    - boa noite
+    - e aí
+
+- intent: despedida
+  examples: |
+    - tchau
+    - adeus
+    - até mais
+    - falou
+    - até logo
+
+- intent: fazer_pedido
+  examples: |
+    - quero fazer um pedido
+    - gostaria de pedir uma pizza
+    - fazer pedido
+    - quero uma pizza
+
+- intent: informar_sabor_pizza
+  examples: |
+    - [calabresa](sabor)
+    - [mussarela](sabor)
+    - [frango](sabor)
+    - [portuguesa](sabor)
+    - quero uma pizza de [calabresa](sabor)
+
+- intent: informar_tamanho_pizza
+  examples: |
+    - [pequena](tamanho)
+    - [média](tamanho)
+    - [media](tamanho)
+    - [grande](tamanho)
+    - quero uma pizza [grande](tamanho)
+
+- intent: informar_tipo_borda
+  examples: |
+    - [borda recheada](borda)
+    - [borda fina](borda)
+    - [borda vulcão](borda)
+    - [sem borda](borda)
+    - quero com [borda recheada](borda)
+
+- intent: confirmar_pedido
+  examples: |
+    - sim
+    - claro
+    - isso mesmo
+    - ok
+    - correto
+    - pode ser
+
+- intent: cancelar_pedido
+  examples: |
+    - cancelar
+    - não quero mais
+    - cancelar pedido
+    - pode cancelar
+    - desisto
+
+- intent: agradecer
+  examples: |
+    - obrigado
+    - valeu
+    - muito obrigado
+    - agradeço
+
+- intent: pedir_cardapio
+  examples: |
+    - cardápio
+    - cardapio
+    - quero ver o cardápio
+    - me mostra o cardápio
+    - opções de pizza
+    - sabores
+    - quais os sabores?
+    - quais pizzas vocês têm?
+    - quero os sabores
+
+- intent: perguntar_entrega
+  examples: |
+    - vocês fazem entrega?
+    - quanto custa a entrega?
+    - qual o valor do delivery?
+    - entrega é grátis?
+    - até onde entregam?
+    - quero saber sobre a entrega
+    - entrega

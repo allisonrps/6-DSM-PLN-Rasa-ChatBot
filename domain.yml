@@ -1,0 +1,76 @@
+version: "3.1"
+
+intents:
+  - saudacao
+  - despedida
+  - fazer_pedido
+  - informar_sabor_pizza
+  - informar_tamanho_pizza
+  - informar_tipo_borda
+  - confirmar_pedido
+  - cancelar_pedido
+  - agradecer
+  - pedir_cardapio
+  - perguntar_entrega
+
+entities:
+  - sabor
+  - tamanho
+  - borda
+
+slots:
+  sabor:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: sabor
+  
+  tamanho:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: tamanho
+
+  borda:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: borda
+
+responses:
+  utter_saudacao:
+  - text: "Oi, seja bem vindo a nossa pizzaria. Como posso te ajudar?"
+
+  utter_despedida:
+  - text: "Até logo... o ministério da saúde não recomenda essa pizza 😂"
+
+  utter_pedir_sabor:
+  - text: "Qual sabor você deseja?"
+
+  utter_pedir_tamanho:
+  - text: "Qual tamanho você deseja? Temos pequena, média e grande."
+
+  utter_pedir_borda:
+  - text: "Qual tipo de borda? Com borda recheada, borda vulcão, borda fina ou sem borda?"
+
+  utter_confirmar_pedido:
+  - text: "Seu pedido está correto? Uma pizza de {sabor} {tamanho} com borda {borda}?"
+
+  utter_cancelar_pedido:
+  - text: "Pedido cancelado. Se precisar de algo é só avisar."
+
+  utter_agradecer:
+  - text: "A Pizzaria agradece, aguardamos você novamente!"
+
+  utter_informar_entrega:
+  - text: "🚚 Fazemos entregas em toda a cidade! Taxa R$ 5,00. Tempo médio até 40 minutos. Acima de R$ 80, entrega grátis!"
+
+actions:
+  - action_validar_sabor
+  - action_validar_tamanho
+  - action_mostrar_cardapio_preco
+  - action_informar_entrega
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
