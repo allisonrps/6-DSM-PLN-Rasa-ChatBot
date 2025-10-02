@@ -29,8 +29,7 @@ O bot entende intenções, responde dúvidas frequentes, mostra o cardápio e co
 ### 1. Clone este repositório
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repo.git
-cd seu-repo
+git clone https://github.com/allisonrps/6-DSM-PLN-Rasa-ChatBot
 ```
 
 ### 2. Crie e ative um ambiente virtual
